@@ -8,12 +8,13 @@ function Thermostat() {
 Thermostat.prototype.up = function (amount) {
   this.temperature += amount
 }
-
+//debugger
 Thermostat.prototype.down = function (amount) {
   this.temperature -= amount
 }
 
 Thermostat.prototype.togglePowerSaving = function () {
+  console.log('isPowerSavingOn', this)
   this.isPowerSavingOn = !this.isPowerSavingOn
 
   if (this.isPowerSavingOn) {
