@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script type="text/javascript" src="./src/thermostat.js"></script>
     <meta charset="utf-8">
     <title>Thermostat interface.</title>
   </head>
@@ -18,7 +17,8 @@
         </p>
 
         <p>
-          Power saving:
+          Power saving: (powersaving is <span id="power-saving-status">on</span>)
+          <br>
           yes <input type="radio" name="powerSavingOn" value="yes">
           no <input type="radio" name="powerSavingOff" value="no">
 
@@ -28,6 +28,6 @@
 
       </form>
     </div>
-
+    <script type="text/javascript" src="./src/thermostat.js"></script>
   </body>
 </html>
