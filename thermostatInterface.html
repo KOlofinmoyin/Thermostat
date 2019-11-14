@@ -3,31 +3,63 @@
   <head>
     <meta charset="utf-8">
     <title>Thermostat interface.</title>
+    <style>
+      a.test{
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
 
-    <div class="">
-      <form class="" action="index.html" method="post">
-        Current Usage: <input type="text" name="currentUsage" value="" readonly>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
 
-        <p>
-          <h3>Temparature:</h3>
-          <input type="submit" name="up" value="Up">
-          <input type="submit" name="down" value="Down">
-        </p>
+    <script>
+      $("a").addClass( "test" );
 
-        <p>
-          Power saving: (powersaving is <span id="power-saving-status">on</span>)
-          <br>
-          yes <input type="radio" name="powerSavingOn" value="yes">
-          no <input type="radio" name="powerSavingOff" value="no">
+      window.onload = function() {
+        alert("Welcome, Ellie & Kenny!");
+      };
 
-        </p>
+      $( document ).ready(function() {
+        $("a").click(function(event){
+          event.preventDefault();
+          $(this).fadeOut("slow");
+        });
 
-        <input type="submit" name="reset" value="Reset">
+        // $( "a" ).click(function( event ) {
+        //
+        //   alert( "As you can see, the link no longer takes you to jquery.com. Muahaha." );
+        //
+        //   event.preventDefault();
+        //
+        // });
+      });
+    </script>
 
-      </form>
-    </div>
+      <div class="">
+        <form class="" action="index.html" method="post">
+          Current Usage: <input type="text" name="currentUsage" value="" readonly>
+
+          <p>
+            <h3>Temparature:</h3>
+            <input type="submit" name="up" value="Up">
+            <input type="submit" name="down" value="Down">
+          </p>
+
+          <p>
+            Power saving: (powersaving is <span id="power-saving-status">on</span>)
+            <br>
+            yes <input type="radio" name="powerSavingOn" value="yes">
+            no <input type="radio" name="powerSavingOff" value="no">
+
+          </p>
+
+          <input type="submit" name="reset" value="Reset">
+
+        </form>
+      </div>
+
     <script type="text/javascript" src="./src/thermostat.js"></script>
   </body>
 </html>
