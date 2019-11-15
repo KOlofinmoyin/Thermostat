@@ -1,41 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <title>Thermostat interface.</title>
-    <style>
-      a.test{
-        font-weight: bold;
-      }
-    </style>
   </head>
   <body>
 
-    <a href="http://jquery.com/">jQuery</a>
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-
-    <script>
-      $("a").addClass( "test" );
-
-      window.onload = function() {
-        alert("Welcome, Ellie & Kenny!");
-      };
-
-      $( document ).ready(function() {
-        $("a").click(function(event){
-          event.preventDefault();
-          $(this).fadeOut("slow");
-        });
-
-        // $( "a" ).click(function( event ) {
-        //
-        //   alert( "As you can see, the link no longer takes you to jquery.com. Muahaha." );
-        //
-        //   event.preventDefault();
-        //
-        // });
-      });
-    </script>
+      <a href="http://jquery.com/">jQuery</a>
 
       <div class="">
         <form class="" action="index.html" method="post">
@@ -43,8 +15,9 @@
 
           <p>
             <h3>Temperature:</h3>
-            <input type="submit" name="up" value="Up">
-            <input type="submit" name="down" value="Down">
+            <p id="degrees"></p>
+            <input type="button" name="up" value="Up" id="upButton">
+            <input type="button" name="down" value="Down">
           </p>
 
           <p>
@@ -55,11 +28,13 @@
 
           </p>
 
-          <input type="submit" name="reset" value="Reset">
+          <input type="button" name="reset" value="Reset">
 
         </form>
       </div>
 
+      <script src="node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="./src/thermostat.js"></script>
+        <script type="text/javascript" src="./src/interface.js"></script>
   </body>
 </html>
